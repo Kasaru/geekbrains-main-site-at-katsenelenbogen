@@ -47,12 +47,13 @@
                 <version>2.22.1</version>
                 <configuration>
                     <includes>
-                        <include>**/*Test*.java</include>
+                        <include>**/*Tests*.java</include>
                     </includes>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 </project>
+
 
 
