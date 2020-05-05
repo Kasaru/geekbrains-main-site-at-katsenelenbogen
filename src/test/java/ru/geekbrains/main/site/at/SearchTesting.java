@@ -6,9 +6,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.openqa.selenium.support.PageFactory;
 import ru.geekbrains.main.site.at.basis.BasisTest;
+@DisplayName("Тест модуля поиска")
+public class SearchTesting extends BasisTest {
 
-public class SearchTests extends BasisTest {
-    @DisplayName("Тест поиска")
     @ParameterizedTest(name = "Тест поиска java")
     @ValueSource(strings = "java")
      void checkSearch(String input){

@@ -1,14 +1,16 @@
 package ru.geekbrains.main.site.at;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.openqa.selenium.support.PageFactory;
 import ru.geekbrains.main.site.at.basis.BasisTest;
 import java.util.stream.Stream;
-
-@DisplayName("Проверка навигации")
-public class NavigationTests extends BasisTest {
+@Execution(ExecutionMode.CONCURRENT)
+@DisplayName("Проверка навигации.")
+public class NavigationTesting extends BasisTest {
 
     static Stream<String> stringProvider() {
         return Stream.of("Курсы", "Вебинары", "Форум", "Блог", "Тесты", "Карьера");
